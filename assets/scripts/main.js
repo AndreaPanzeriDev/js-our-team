@@ -15,41 +15,52 @@ organizzare i singoli membri in card/schede
 
 const team = [
     {
-      name: 'Wayne Barnett',
-      role: 'Founder & CEO',
-      image: 'wayne-barnett-founder-ceo.jpg',
+        name: 'Wayne Barnett',
+        role: 'Founder & CEO',
+        image: 'wayne-barnett-founder-ceo.jpg',
     },
     {
-      name: 'Angela Caroll',
-      role: 'Chief Editor',
-      image: 'angela-caroll-chief-editor.jpg',
+        name: 'Angela Caroll',
+        role: 'Chief Editor',
+        image: 'angela-caroll-chief-editor.jpg',
     },
     {
-      name: 'Walter Gordon',
-      role: 'Office Manager',
-      image: 'walter-gordon-office-manager.jpg',
+        name: 'Walter Gordon',
+        role: 'Office Manager',
+        image: 'walter-gordon-office-manager.jpg',
     },
     {
-      name: 'Angela Lopez',
-      role: 'Social Media Manager',
-      image: 'angela-lopez-social-media-manager.jpg',
+        name: 'Angela Lopez',
+        role: 'Social Media Manager',
+        image: 'angela-lopez-social-media-manager.jpg',
     },
     {
-      name: 'Scott Estrada',
-      role: 'Developer',
-      image: 'scott-estrada-developer.jpg',
+        name: 'Scott Estrada',
+        role: 'Developer',
+        image: 'scott-estrada-developer.jpg',
     },
     {
-      name: 'Barbara Ramos',
-      role: 'Graphic Designer',
-      image: 'barbara-ramos-graphic-designer.jpg',
+        name: 'Barbara Ramos',
+        role: 'Graphic Designer',
+        image: 'barbara-ramos-graphic-designer.jpg',
     },
-  ];
+];
+
+const percorso = '/assets/img/'
 
 
+for (let i in team) {
+    let user = team[i];
+    console.log(user.image);
+    document.getElementById("infoOutput").innerHTML += `
+    <div class="bg-white mt-5 dimension">
+     <div>
+      <img src=${percorso + user.image} class="img">
+     </div>
+     <div class="text-center fs-5">${user.name}</div>
+     <div class="text-center">${user.role}</div>
+    </div>
+    
+    `
 
-
-  for(let i in team){
-    let user = team[i].name + ' ' + team[i].role + ' ' + team[i].image;
-    console.log(user);
-  }
+}
