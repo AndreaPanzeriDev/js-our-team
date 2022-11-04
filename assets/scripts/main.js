@@ -50,5 +50,6 @@ const team = [
 
 
   for(let i in team){
-    console.log(team[i]);
+    let user = team[i].name + ' ' + team[i].role + ' ' + team[i].image;
+    console.log(user);
   }
